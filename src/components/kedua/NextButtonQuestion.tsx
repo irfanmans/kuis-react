@@ -17,7 +17,7 @@ export default function NextButtonQuestion({
     return (
       <>
         <button
-          className="py-3 px-5 bg-purple-600 text-white font-medium rounded-xl mt-5 absolute right-0"
+          className="py-3 px-5 w-full lg:w-1/5 bg-purple-600 text-white font-medium rounded-xl mt-5 lg:absolute lg:right-6"
           onClick={() => dispatch({ type: "nextQuestion" })}
         >
           Selanjutnya
@@ -29,7 +29,7 @@ export default function NextButtonQuestion({
     return (
       <>
         <button
-          className="py-3 px-5 bg-purple-600 text-white font-medium rounded-xl mt-5 absolute right-0"
+          className="py-3 px-5 w-full lg:w-1/5 bg-purple-600 text-white font-medium rounded-xl mt-5 lg:absolute lg:right-6"
           onClick={() => dispatch({ type: "finish" })}
         >
           Selesai

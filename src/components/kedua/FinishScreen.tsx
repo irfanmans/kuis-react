@@ -16,7 +16,7 @@ export default function FinishScreen({
   const persentasi = (points / maxPossiblePoints) * 100;
   return (
     <>
-      <div className="bg-sky-600 px-5 py-5 text-center text-xl text-white rounded-full">
+      <div className="bg-sky-600 px-5 py-5 text-center lg:text-xl text-lg text-white rounded-full">
         <p>
           Anda mendapatkan nilai skor {points} dari {numQuestion} pertanyaan (
           {Math.ceil(persentasi)} %)

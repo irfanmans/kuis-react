@@ -29,7 +29,7 @@ export default function Progress({
 
       <div className="flex justify-between mt-5 text-sm">
         <p>
-          Question <strong>{index + 1}</strong> / {numQuestion}
+          Pertanyaan <strong>{index + 1}</strong> / {numQuestion}
         </p>
         <p>
           {points} / {maxPossiblePoint}

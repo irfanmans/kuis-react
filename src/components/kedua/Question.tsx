@@ -27,14 +27,14 @@ export default function Question({
               onClick={() => dispatch({ type: "newAnswer", payload: index })}
               disabled={hasAnswer}
               className={`${
-                index === answer ? "transform translate-x-8" : ""
+                index === answer ? "transform translate-x-4" : ""
               } ${
                 hasAnswer
                   ? index === question.correctOption
                     ? "bg-[#0f8ca2]"
                     : "bg-[#fd9f41]"
                   : "bg-[#3f474c] hover:bg-slate-800"
-              } flex py-4 px-5 font-semibold rounded-full w-full transation duration-300  hover:translate-x-6`}
+              } flex py-4 px-5 font-semibold rounded-full w-full transation duration-300 hover:translate-x-4`}
             >
               <span className="mr-3">{optionLabels[index]}</span>
               {data}

@@ -7,7 +7,7 @@ interface PropsMain {
 export default function Main({ children }: PropsMain) {
   return (
     <>
-      <main className="w-1/2 mx-auto mt-20 font-poppins relative">
+      <main className="w-full lg:w-1/2 px-6 mx-auto mt-20 font-poppins lg:relative">
         {children}
       </main>
     </>
