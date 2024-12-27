@@ -1,0 +1,139 @@
+{
+  "questions": [
+    {
+      "question": "Manakah framework JavaScript yang paling populer?",
+      "options": ["Angular", "React", "Svelte", "Vue"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Perusahaan manakah yang menemukan React?",
+      "options": ["Google", "Apple", "Netflix", "Facebook"],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "Apa dasar dasar dari aplikasi React?",
+      "options": ["Komponen", "Blok", "Elemen", "Efek"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Apa nama sintaksis yang kita gunakan untuk mendeskripsikan UI dalam komponen React?",
+      "options": ["FBJ", "Babel", "JSX", "ES2015"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "Bagaimana data mengalir secara alami di aplikasi React?",
+      "options": [
+        "Dari parents ke children",
+        "Dari children ke parents",
+        "Kedua arah",
+        "Pengembang yang memutuskan"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Bagaimana cara meneruskan data ke komponen anak?",
+      "options": ["State", "Props", "PropTypes", "Parameter"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Kapan harus menggunakan derived state?",
+      "options": [
+        "Kapan pun state tidak boleh memicu re-render",
+        "Kapan pun state dapat disinkronkan dengan effect",
+        "Kapan pun state harus dapat diakses oleh semua komponen",
+        "Kapan pun state dapat dihitung dari variabel state lainnya"
+      ],
+      "correctOption": 3,
+      "points": 30
+    },
+    {
+      "question": "Apa yang memicu render ulang UI di React?",
+      "options": [
+        "Menjalankan effect",
+        "Meneruskan props",
+        "Memperbarui state",
+        "Menambahkan event listener ke elemen DOM"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "Kapan kita langsung \"menyentuh\" DOM di React?",
+      "options": [
+        "Saat kita perlu mendengarkan sebuah event",
+        "Saat kita perlu mengubah UI",
+        "Saat kita perlu menambahkan gaya",
+        "Hampir tidak pernah"
+      ],
+      "correctOption": 3,
+      "points": 20
+    },
+    {
+      "question": "Dalam situasi apa kita menggunakan panggilan balik untuk memperbarui status?",
+      "options": [
+        "Saat memperbarui state akan lambat",
+        "Saat state yang diperbarui sangat bergantung pada data",
+        "Saat pembaruan state harus lebih cepat",
+        "Saat state baru bergantung pada state sebelumnya"
+      ],
+      "correctOption": 3,
+      "points": 30
+    },
+    {
+      "question": "Jika kita meneruskan suatu fungsi ke useState, kapan fungsi tersebut akan dipanggil?",
+      "options": [
+        "Pada setiap re-render",
+        "Setiap kali kita memperbarui state",
+        "Hanya pada render pertama",
+        "Pertama kali kita memperbarui state"
+      ],
+      "correctOption": 2,
+      "points": 30
+    },
+    {
+      "question": "Hook mana yang digunakan untuk permintaan API pada render awal komponen?",
+      "options": ["useState", "useEffect", "useRef", "useReducer"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Variabel mana yang harus masuk ke dalam array dependensi useEffect?",
+      "options": [
+        "Biasanya tidak ada",
+        "Semua variabel state kita",
+        "Semua state dan props yang digunakan dalam effect",
+        "Semua variabel yang dibutuhkan untuk pembersihan"
+      ],
+      "correctOption": 2,
+      "points": 30
+    },
+    {
+      "question": "Sebuah effect akan selalu dijalankan pada render pertama.",
+      "options": [
+        "Benar",
+        "Tergantung pada array dependensi",
+        "Salah",
+        "Tergantung pada kode di dalam efek"
+      ],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "question": "Kapan efek akan dijalankan jika tidak memiliki array dependensi?",
+      "options": [
+        "Hanya saat komponen dipasang",
+        "Hanya saat komponen dibongkar",
+        "Pertama kali komponen di-render ulang",
+        "Setiap kali komponen di-render ulang"
+      ],
+      "correctOption": 3,
+      "points": 20
+    }
+  ]
+}
