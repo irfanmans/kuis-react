@@ -1,6 +1,6 @@
 interface StartScreenProps {
   numQuestion: number;
-  dispatch: (action: { type: "start" }) => void;
+  dispatch: React.Dispatch<{ type: "start" }>;
 }
 
 export default function StartScreen({
@@ -10,10 +10,10 @@ export default function StartScreen({
   return (
     <>
       <div className="text-center">
-        <h2 className="text-2xl lg:text-6xl font-bold text-[#58c4dc]">
+        <h2 className="text-xl lg:text-5xl font-bold text-[#58c4dc]">
           Selamat Datang Di React Quiz
         </h2>
-        <h3 className="mt-2 text-md lg:text-2xl text-white">
+        <h3 className="mt-2 text-sm lg:text-2xl text-white">
           {numQuestion} question to test your React mastery
         </h3>
         <button

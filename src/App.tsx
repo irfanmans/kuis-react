@@ -22,11 +22,12 @@ interface State {
   answer: null | number;
   point: number;
   highscore: number;
+  error: string;
 }
 
 type Action =
   | { type: "dataReceived"; payload: Questions[] }
-  | { type: "dataFailed" }
+  | { type: "dataFailed"; payload: string }
   | { type: "start" }
   | { type: "newAnswer"; payload: number }
   | { type: "nextQuestion" }
@@ -40,6 +41,7 @@ const initialState: State = {
   answer: null,
   point: 0,
   highscore: 0,
+  error: "",
 };
 
 function reducer(state: State, action: Action): State {
@@ -49,7 +51,7 @@ function reducer(state: State, action: Action): State {
     case "dataReceived":
       return { ...state, questions: action.payload, status: "ready" };
     case "dataFailed":
-      return { ...state, status: "error" };
+      return { ...state, status: "error", error: action.payload };
     case "start":
       return { ...state, status: "active" };
     case "newAnswer":
@@ -82,9 +84,7 @@ function reducer(state: State, action: Action): State {
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const { questions, status, index, answer, point, highscore } = state;
-
-  console.log(answer);
+  const { questions, status, index, answer, point, highscore, error } = state;
 
   // Mendapatkan jumlah pertanyaan
   const numQuestion = questions.length;
@@ -97,14 +97,14 @@ function App() {
     fetch("http://localhost:8000/questions")
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
-      .catch(() => dispatch({ type: "dataFailed" }));
+      .catch((err) => dispatch({ type: "dataFailed", payload: err.message }));
   }, []);
 
   return (
     <>
       <Main>
         {status === "loading" && <Loading />}
-        {status === "error" && <Error />}
+        {status === "error" && <Error error={error} />}
         {status === "ready" && (
           <StartScreen numQuestion={numQuestion} dispatch={dispatch} />
         )}
